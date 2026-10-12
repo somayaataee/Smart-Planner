@@ -1,0 +1,40 @@
+@import "tailwindcss";
+ /* :root{
+ --bg: #0F172A;
+  --card: #1E293B;
+  --primary: #3B82F6;
+  --text: #F8FAFC;
+  --border: #334155;
+}  */
+
+body{
+    background:var(--bg);
+    color:var(--text);
+    transition:.3s;
+}
+.nav-item{
+    @apply text-black px-5 py-2 rounded-2xl items-center justify-center flex flex-col;
+}   
+.nav-item:hover{
+    @apply bg-black/10;
+}
+.sett-input{
+    border: 1px solid white;
+    padding: 5px;
+    margin-bottom: 7px;
+    border-radius: 10px;
+}
+.sidebar-icon {
+  animation: float 2s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+}
+/* -----------Note cards----------- */
