@@ -1,16 +1,28 @@
-# React + Vite
+# Smart Planner
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Smart Planner is a simple task planning app that helps users organize their daily tasks and manage their time. I built this project to practice my frontend development skills and improve my experience with React.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Organize daily tasks
+- Plan and manage schedules
+- Simple and clean user interface
+- Easy-to-use design
 
-## React Compiler
+## Screenshot
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+<!-- Add your project screenshot here -->
 
-## Expanding the ESLint configuration
+![Smart Planner Screenshot](../Todo-list/src/assets/images/Screenshot.png)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Technologies Used
+
+- React
+- Vite
+- Tailwind CSS
+
+## Live Demo
+
+Check out the live version here:
+
+[Smart Planner](https://smart-planner-p4dk.vercel.app/)
