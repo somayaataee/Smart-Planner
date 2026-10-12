@@ -33,7 +33,6 @@ export default function NavBar() {
     >
       <div className="flex justify-between items-center gap-4">
       
-        {/* Search — desktop only */}
         <div className="relative hidden md:block flex-1 max-w-md">
           <SearchButton />
         </div>

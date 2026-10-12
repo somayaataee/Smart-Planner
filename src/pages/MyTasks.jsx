@@ -1,6 +1,4 @@
 import { useState } from "react";
-import Sidebar from "../components/layout/Sidebar.jsx";
-import Navbar from "../components/layout/Navbar.jsx";
 import { TaskTabs } from "../components/myTask/TaskTabs.jsx";
 import { TaskTable } from "../components/myTask/TaskTable.jsx";
 import { TaskCalendar } from "../components/myTask/TaskCalendar.jsx";
@@ -44,57 +42,45 @@ export default function MyTasks() {
 
   if (tasksLoading && tasks.length === 0) {
     return (
-      <div style={{background:'var(--bg)',text:'var(--text)'}} className="flex min-h-screen ">
-        <Sidebar />
-        <div className="flex-1 flex flex-col min-w-0">
-          <Navbar />
-          <div className="flex-1 flex items-center justify-center">
-            <LoadingSpinner size="lg" />
-          </div>
-        </div>
+      <div className="flex items-center justify-center min-h-[60vh]">
+        <LoadingSpinner size="lg" />
       </div>
     );
   }
 
   return (
-    <div style={{background:'var(--bg)',text:'var(--text)'}} className="flex min-h-screen ">
-      <Sidebar />
-      <div className="flex-1 flex flex-col min-w-0">
-        <Navbar />
-        <div className="flex-1 p-3 sm:p-4 md:p-6 overflow-auto pb-28 md:pb-6">
-          {(tasksError || scheduleError) && (
-            <ErrorMessage
-              message={tasksError || scheduleError}
-              onRetry={() => {
-                if (tasksError) refetchTasks();
-                if (scheduleError) refetchSchedule();
-              }}
-            />
-          )}
+    <div style={{ color: "var(--text)" }} className="min-w-0">
+      {(tasksError || scheduleError) && (
+        <ErrorMessage
+          message={tasksError || scheduleError}
+          onRetry={() => {
+            if (tasksError) refetchTasks();
+            if (scheduleError) refetchSchedule();
+          }}
+        />
+      )}
 
-          <div className="flex flex-col xl:flex-row gap-4 md:gap-6">
-            <div className="flex-1 min-w-0">
-              <h1 className="text-xl md:text-2xl font-bold mb-4 md:mb-6">
-                My Tasks
-              </h1>
-              <TaskTabs activeTab={activeTab} onTabChange={setActiveTab} />
-              <QuickTaskInput />
-              <TaskTable
-                tasks={filteredTasks}
-                onToggleComplete={toggleTask}
-                onDelete={deleteTask}
-              />
-            </div>
-            <div className="w-full xl:w-80 flex flex-col gap-4 md:gap-6 shrink-0">
-              <TaskCalendar />
-              <TaskProgress
-                percent={progressPercent}
-                completed={completedCount}
-                total={tasks.length}
-              />
-              <TodaySchedule items={scheduleItems} loading={scheduleLoading} />
-            </div>
-          </div>
+      <div className="flex flex-col xl:flex-row gap-4 md:gap-6">
+        <div className="flex-1 min-w-0">
+          <h1 className="text-xl md:text-2xl font-bold mb-4 md:mb-6">
+            My Tasks
+          </h1>
+          <TaskTabs activeTab={activeTab} onTabChange={setActiveTab} />
+          <QuickTaskInput />
+          <TaskTable
+            tasks={filteredTasks}
+            onToggleComplete={toggleTask}
+            onDelete={deleteTask}
+          />
+        </div>
+        <div className="w-full xl:w-80 flex flex-col gap-4 md:gap-6 shrink-0">
+          <TaskCalendar />
+          <TaskProgress
+            percent={progressPercent}
+            completed={completedCount}
+            total={tasks.length}
+          />
+          <TodaySchedule items={scheduleItems} loading={scheduleLoading} />
         </div>
       </div>
     </div>
