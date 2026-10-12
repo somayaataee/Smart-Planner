@@ -13,7 +13,7 @@ Smart Planner is a simple task planning app that helps users organize their dail
 
 <!-- Add your project screenshot here -->
 
-![Smart Planner Screenshot](../Todo-list/src/assets/images/Screenshot.png)
+![Smart Planner Screenshot](./src/assets/images/Screenshot.png)
 
 ## Technologies Used
 
@@ -23,6 +23,6 @@ Smart Planner is a simple task planning app that helps users organize their dail
 
 ## Live Demo
 
-Check out the live version here:
+Check out the live version here:👇
 
 [Smart Planner](https://smart-planner-p4dk.vercel.app/)
